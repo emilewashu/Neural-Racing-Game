@@ -1,0 +1,181 @@
+body{
+    margin:0;
+    background: black;
+    overflow:hidden;
+    text-align:center;
+}
+
+#myCanvas{
+    background-color: #343434; 
+  border-right: 20px solid grey; 
+  border-left: 20px solid grey; 
+  height: 100vh;
+}
+
+#loading-screen {
+
+    /* Background */
+    background-image: url("images/cargif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Title */
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    font-size: 48px;
+    /* color: white; */
+    text-align: center;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    line-height: 13;
+    animation: led-animation 2s infinite;
+  }
+  @keyframes led-animation {
+    0% { color: red; }
+    15% { color: orange; }
+    30% { color: yellow; }
+    45% { color: lime; }
+    60% { color: aqua; }
+    75% { color: blue; }
+    90% { color: purple; }
+    100% { color: red; }
+  }
+
+
+  
+  /* Game Container CSS */
+  #game-container {
+    background-image: url("images/beach.gif");
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Start Button CSS */
+  #start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    box-shadow: 6px 6px 6px black;
+  }
+
+  
+  #start-button:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid #212121;
+    border-right: 3px solid #212121;
+    transition: all 0.4s, opacity 0.1s 0.4s;
+    opacity: 0;
+  }
+  
+  #start-button:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 3px solid #212121;
+    border-left: 3px solid #212121;
+    transition: all 0.4s, opacity 0.1s 0.4s;
+    opacity: 0;
+  }
+  
+  #start-button:hover:after, #start-button:hover:before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    transition: all 0.4s, opacity 0.1s;
+    opacity: 1;
+  }
+
+  #game-over-screen {
+  display: none;
+  font-family: "Press Start 2P", "consolas", sans-serif;
+  font-size: 60px;
+  color: red;
+  text-align: center;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  line-height: 1.3; 
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  #restart-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    box-shadow: 6px 6px 6px black;
+    
+  }
+
+  
+  #restart-button:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid #212121;
+    border-right: 3px solid #212121;
+    transition: all 0.4s, opacity 0.1s 0.4s;
+    opacity: 0;
+  }
+  
+  #restart-button:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 3px solid #212121;
+    border-left: 3px solid #212121;
+    transition: all 0.4s, opacity 0.1s 0.4s;
+    opacity: 0;
+  }
+  
+  #restart-button:hover:after, #start-button:hover:before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    transition: all 0.4s, opacity 0.1s;
+    opacity: 1;
+  }
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Game</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <img id="car" src="images/car2.avif" style="display: none;">
+    <img id="police" src="images/police.png" style="display: none;">
+    <img id="boom" src="images/boom.png" style="display: none;">
+
+
+
+
+</head>
+<body>
+    <div id="loading-screen">
+        Hot Pursuit
+    </div>
+    <div id="game-container" style="display: none;">
+        <canvas id="myCanvas"></canvas>
+    </div>
+    <div id="game-over-screen">
+        <div id="game-over-text">Game Over</div>
+        <button id="restart-button">Restart</button>
+    </div>
+    <button id="start-button">Start Game</button>
+    <canvas id = "myCanvas"></canvas>
+    <script src="network.js"></script>
+    <script src="police.js"></script>
+    <script src="sensor.js"></script>
+    <script src="utils.js"></script>
+    <script src="player.js"></script>
+    <script src = "controls.js"></script>
+    <script src = "field.js"></script>
+    <script src = "main.js"></script>
+
+
+</body>
+</html>
